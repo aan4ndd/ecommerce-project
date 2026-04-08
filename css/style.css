@@ -5,9 +5,9 @@
     padding: 0;
     max-width: 100%;
     overflow: hidden;
-     font-family: "Barlow Semi Condensed", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -70,8 +70,7 @@ h2{
   background-color: rgb(245, 54, 54);
   width: 330px;
 }
-.graphics{
-}
+
 .graphics img{
   height: 100vh;    
   width: auto;

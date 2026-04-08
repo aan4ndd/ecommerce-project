@@ -1,39 +1,54 @@
 <?php
 $showAlert = false;
 $showError = false;
-$empty = false;
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
         include 'config.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
-    $exists = false;
-   
-    if(empty($username) || empty($password) || empty($cpassword)){
-        $empty = true;
-    }else if
-    (($password == $cpassword) && $exists == false){
-      $sql = "INSERT INTO users (username, password, dt) 
-        VALUES ('$username', '$password', current_timestamp())";
-        
-$result = mysqli_query($conn, $sql);
-        }     
-if($result){
-    $showAlert = true;
-} else {
-     // die("Error: " . mysqli_error($conn));
-}
+
+    // check if exists
+    $existSql = "SELECT * FROM `users` WHERE username = '$username'";
+    $result = mysqli_query($conn, $existSql);
+    $numExists = mysqli_num_rows($result);
+    if($numExists > 0 ){
+
+        $showError = "Username Already exists";
+
     }
+    else{
+        if(($password == $cpassword)){ 
+             $sql = "INSERT INTO users (username, password, dt) 
+             VALUES ('$username', '$password', current_timestamp())";
+             $result = mysqli_query($conn, $sql);
+
+             if($result){   
+                $showAlert = true;
+                header("location: login.php");
+             }
+            }
+             else{
+                $showError = "Passwords do not match";
+             }
+            }
+         }
+            
+        
+      
+     
 
 
+    
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    
 
 </head>
 <body>
@@ -56,7 +71,7 @@ if($result){
                     <input type="password" id="cpassword" name="cpassword">
                     
                 </div>
-                <button type="submit" class="mySubmit">Submit
+                <button type="submit" class="mySubmit" onclick="this.disabled=true; this.form.submit();">Submit
                 </button>
             <?php
                 if($showAlert){
