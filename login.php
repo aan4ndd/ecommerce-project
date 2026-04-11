@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="hero">
         <div class="signupForm">
             <div class="leftContainer">
-            <div class="logo">Placeholder</div>
+            <div class="logo"><h3>HaggleHub</h3> </div>   
             <h2>Login to continue</h2>
             <form action="login.php" method="post">
                 <div class="username">

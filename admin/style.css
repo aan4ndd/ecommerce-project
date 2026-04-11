@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bungee&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=News+Cycle:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.nav{
+    display: flex;
+    border: 1px solid black;
+    height: 100px;
+    align-items: center;
+    gap: 290px;
+}
+.logo{
+    padding: 20px;
+    font-size: 35px;
+}
+.logo h3::first-letter{
+    color: rgb(24, 57, 243);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    font-size: 20px;
+    padding: 8px;
+    margin: 5px;
+}
+h1{
+    text-align: center;
+}
+form{
+    font-size: 30px;
+    margin-top: 50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-left: 500px;
+    }
+input{
+    font-size: 30px;
+    width: 600px;
+}
+select{
+    font-size: 30px;
+    width: 600px;
+}

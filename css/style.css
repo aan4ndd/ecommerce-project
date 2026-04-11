@@ -34,9 +34,13 @@
 .graphics{
     width: 50%;
 }
-.logo{
+.logo h3{
     font-size: 40px;
     text-align: center;
+}
+
+.logo h3::first-letter{
+    color: rgb(24, 57, 243);
 }
 h2{
     text-align: center;

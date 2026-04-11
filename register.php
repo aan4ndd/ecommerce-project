@@ -34,11 +34,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
          }
             
-        
-      
-     
-
-
     
 ?>
 
@@ -56,8 +51,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="hero">
         <div class="signupForm">
             <div class="leftContainer">
-            <div class="logo">Placeholder</div>
-            <h2>Sign up to continue</h2>
+        <div class="logo"><h3>HaggleHub</h3> </div>   
+         <h2>Sign up to continue</h2>
             <form action="register.php" method="post">
                 <div class="username">
                     <label for="username">Username</label><br>
