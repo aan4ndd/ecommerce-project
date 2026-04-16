@@ -5,18 +5,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'config.php';
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $user_id = $_POST["user_id"];
     
    
     $sql =  "Select * from users where username= '$username' AND password='$password'";
     $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result); 
-    if($num == 1){
-        $login = true;
-        // $showAlert = true;
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
         session_start();
         $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
-
+        $_SESSION['user_id'] = $row['user_id'];
+        $_SESSION['username'] = $row['username'];
+        
 
         header("location: index.php");
     }

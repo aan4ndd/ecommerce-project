@@ -19,20 +19,21 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 </head>
 <body>
     <div class="nav">
-        <div class="logo"><h3>HaggleHub</h3>
-        </div>
+        <a href="index.php"><div class="logo"><h3>HaggleHub</h3> </div></a>
         <div class="search">
-            <input type="text">x
+            <input type="text">
             
         </div>
         <div class="navButtons">
-            <a href="">Cart</a>
-            <a href="">Products</a>
+            <a href="products.php">Products</a>
+            <a href="cart.php">Cart</a>
+            <a href="orders.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
     </div>
          <div class="hero">
             <div class="left">
+                
                 <h1>Welcome to <br>HaggleHub, <?php echo $_SESSION['username'] ?></h1>
                 <h3>Discover amazing products and decide your prices on latest
                     trends in electronics, fashion, and more!

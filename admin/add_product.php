@@ -1,4 +1,6 @@
 <?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
     include("../config.php");
     if(isset($_POST['insert_product'])){
         $product_name = $_POST['product_name'];
@@ -25,7 +27,7 @@
 
                 // insert 
                 $product_insert="insert into `products` (product_name, product_description, category_id, product_img1, product_img2, product_price, date, status) values
-                                 ('$product_name', '$product_description', '$product_category', '$product_img1', '$product_img2', '$product_price', NOW(), '$product_status')";
+                                 ('$product_name', '$product_description', '$product_category', '$product_img1', '$product_img2', $product_price, NOW(), '$product_status')";
                   
                 $result = mysqli_query($conn, $product_insert);
                 if($result){
