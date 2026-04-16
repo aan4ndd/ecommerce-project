@@ -75,13 +75,14 @@ if (isset($_POST['place_order'])) {
 
  <div class="nav">
         <a href="index.php"><div class="logo"><h3>HaggleHub</h3> </div></a>
-        <div class="navButtons">
+      <div class="navButtons">
             <a href="products.php">Products</a>
             <a href="cart.php">Cart</a>
+            <a href="my_bargains.php">Bargains</a>
             <a href="orders.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
-    </div>
+    </div> 
 
 <div class="checkout">
 <h2>Checkout</h2>

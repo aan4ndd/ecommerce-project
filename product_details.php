@@ -51,7 +51,7 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="nav">
+   <div class="nav">
         <a href="index.php"><div class="logo"><h3>HaggleHub</h3> </div></a>
         <div class="search">
             <input type="text">
@@ -60,9 +60,11 @@ if (!isset($_SESSION['user_id'])) {
         <div class="navButtons">
             <a href="products.php">Products</a>
             <a href="cart.php">Cart</a>
+            <a href="my_bargains.php">Bargains</a>
             <a href="orders.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
+    </div>  
 </div>
 
 <div class="prodDetails">
@@ -70,4 +72,7 @@ if (!isset($_SESSION['user_id'])) {
  productDetails();
 ?>
  </div>
+
+
+</body>
 

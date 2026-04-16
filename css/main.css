@@ -6,14 +6,16 @@
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 400;
     font-style: normal;
-
+    /* background-color: rgb(179, 179, 179); */
 }
+
 .nav{
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100px;
     align-items: center;
+    background-color: whitesmoke;
 }
 .logo{
     padding: 20px;
@@ -26,6 +28,12 @@
     width: 300px;
     height: 30px;
     border-radius: 12px;
+}
+.navButtons{
+    padding: 30px;
+}
+.navButtons a{
+    margin: 0 10px;
 }
 .hero{
     display: flex;
@@ -57,6 +65,42 @@
     margin-top: 30px;
     width: 205px;
 }
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.productCard {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.info h3 {
+    font-size: 18px;
+}
+
+.info p {
+    font-size: 14px;
+    color: gray;
+}
 /* products page  */
 
 .productHero{
@@ -64,25 +108,40 @@
     height: 100vh;
 }
 .filter{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 200px;
     height: 100;
+    text-align: center;
+    margin: 10px 0;
+}
+.filter li{
+    margin: 15px 0;
 }
 .productContainer{
     /* display: flex; */
 }
-.card{
+
+.mainCard{
     display: flex;
     /* flex-direction: column; */
     align-items: center;
     justify-content: flex-start;
-    border: 1px solid black;
+    border-radius: 8px;
+    /* border: 0.2px solid rgb(135, 135, 135); */
     gap: 20px;
+    transition: transform 0.2s;
     padding: 40px 0;
 }
+ .mainCard:hover {
+    transform: scale(1.05);
+}
+
 a{
     text-decoration: none;
     color: black    ;
+}
+.productHr{
+    color: whitesmoke;
 }
 
 /* product details  */
@@ -95,8 +154,42 @@ a{
     padding: 80px;
     gap: 40px;
 }
+.prodDetails h1{
+    margin-bottom: 10px;
+}
 .detSec{
     width: 800px;
+}
+.buySec{
+    background-color: whitesmoke;
+    padding: 25px;
+    height: 200px;
+    border-radius: 8px;
+    width: 180px;
+    text-align: center;
+}
+.buySec p{
+    margin-bottom: 15px;
+}
+.buyBtn{
+    padding: 8px;
+    background-color: rgb(24, 57, 243); 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.bargainBtn{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+.bargainBtn a{
+    color: white;
 }
 .detSec, .buySec{
     margin-top: 100px;
@@ -108,5 +201,19 @@ a{
 }
 .orders{
     text-align: center;
-    margin-top: 150px;
+    
+}
+.bargain{
+ padding: 50px;
+}
+.bargain h2{
+    margin-bottom: 10px;
+}
+.bargainProcess{
+    text-align: center;
+    margin-top: 250px;
+    font-size: 35px;
+}
+hr{
+    margin: 15px 0;
 }

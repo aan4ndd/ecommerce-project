@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include("functions.php");
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     header("location: login.php");
     exit();
@@ -27,10 +27,11 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         <div class="navButtons">
             <a href="products.php">Products</a>
             <a href="cart.php">Cart</a>
+            <a href="my_bargains.php">Bargains</a>
             <a href="orders.php">Orders</a>
             <a href="logout.php">Logout</a>
         </div>
-    </div>
+    </div>  
          <div class="hero">
             <div class="left">
                 
@@ -44,6 +45,10 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                 <img src="img/heroimg.cms" alt="" height="350px" width="auto">
             </div>
         </div>   
-        <div class="featuredProducts"></div>
+        <div class="featuredProducts">
+<?php 
+        getProductsGrid();
+?>
+</div>
 </body>
 </html>
