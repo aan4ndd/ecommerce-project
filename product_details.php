@@ -73,6 +73,8 @@ if (!isset($_SESSION['user_id'])) {
 ?>
  </div>
 
-
+<div class="footer">
+    <p>HaggleHub 2026</p>
+</div>
 </body>
 

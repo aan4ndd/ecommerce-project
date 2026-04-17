@@ -44,6 +44,11 @@
     height: 500px;
     background-color: rgb(24, 57, 243);
 }
+.hero2 {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  margin-bottom: 80px;
+}
 .right img{
     border-radius: 12px;
 }
@@ -145,12 +150,18 @@ a{
 }
 
 /* product details  */
-
+.deliveryDet{
+    color: gray;
+    font-weight: bolder;
+}
+img{
+    border-radius: 10px;
+}
 .prodDetails{
     display: flex;
     align-items: flex-start;
-    height: 80vh;
-    border: 1px solid black;
+    /* height: 80vh;
+    border: 1px solid black; */
     padding: 80px;
     gap: 40px;
 }
@@ -186,6 +197,7 @@ a{
     padding: 5px;
     font-size: 15px;
     border: none;
+    height: 35px;
     border-radius: 10px;
 }
 .bargainBtn a{
@@ -216,4 +228,19 @@ a{
 }
 hr{
     margin: 15px 0;
+}
+.footer{
+    display: flex;
+    background-color: rgb(24, 57, 243);
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+     position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }

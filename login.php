@@ -53,6 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <button type="submit" class="mySubmit">Login
                 </button>
+                <p style="text-align: center">Don't have an account? <a href="register.php">SignUp </a></p>
                  <?php
                 if($showAlert){
 

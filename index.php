@@ -39,7 +39,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                 <h3>Discover amazing products and decide your prices on latest
                     trends in electronics, fashion, and more!
                 </h3>
-                <button>Shop Now →</button>
+               <a href="products.php"> <button>Shop Now →</button></a>
             </div>
             <div class="right">
                 <img src="img/heroimg.cms" alt="" height="350px" width="auto">
@@ -49,6 +49,12 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 <?php 
         getProductsGrid();
 ?>
+</div>
+<div class="hero2">
+    <a href="product_details.php?product_id=6"><img src="img/s25.jpg" alt="" width="1200px"></a>
+</div>
+<div class="footer">
+    <p>HaggleHub 2026</p>
 </div>
 </body>
 </html>

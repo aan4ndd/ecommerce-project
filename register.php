@@ -68,6 +68,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <button type="submit" class="mySubmit" onclick="this.disabled=true; this.form.submit();">Submit
                 </button>
+                <p style="text-align: center">Already have an account? <a href="login.php">Login </a></p>
+
             <?php
                 if($showAlert){
 
