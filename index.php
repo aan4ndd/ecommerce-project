@@ -53,8 +53,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 <div class="hero2">
     <a href="product_details.php?product_id=6"><img src="img/s25.jpg" alt="" width="1200px"></a>
 </div>
-<div class="footer">
-    <p>HaggleHub 2026</p>
-</div>
+
+<div class="footer"><p>© 2025 HaggleHub. All rights reserved.</p></div>
+
 </body>
 </html>
